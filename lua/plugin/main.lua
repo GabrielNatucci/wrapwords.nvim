@@ -25,13 +25,10 @@ function main(start_char, end_char)
     local _, start_row, start_col, _ = unpack(vim.fn.getpos("'<"))
     local _, end_row, end_col, _ = unpack(vim.fn.getpos("'>"))
 
-    -- Make sure the selection is on the same line
     if start_row == end_row then
-        -- Get the selected text
         local line = vim.fn.getline(start_row)
         local selected_text = line:sub(start_col, end_col)
 
-        -- Replace the selection with quoted text
         local new_text = start_char .. selected_text .. end_char
         vim.fn.setline(start_row, line:sub(1, start_col - 1) .. new_text .. line:sub(end_col + 1))
     else
