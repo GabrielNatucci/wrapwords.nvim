@@ -33,7 +33,7 @@ To use this plug-in, you must select the text that you want to wrap in visual mo
 ```
 :Wrapwordsdoublequotes
 :Wrapwordssinglequotes
-:Wrapwordssinglequotes
+:Wrapwordsparentheses
 ```
 
 # Installation
